@@ -34,13 +34,42 @@
         <ul class="button-list">
             <li>
                 <button onclick="togglePage('page1')">Ferramentas Essenciais</button>
-                <div id="page1" class="content">
-                    <i class="icon fas fa-file-excel" title="Abrir Excel" onclick="openExcel()"></i>
-                    <i class="icon fas fa-file-word" title="Abrir Word" onclick="openWord()"></i>
-                    <i class="icon fas fa-calculator" title="Abrir Calculadora" onclick="openCalculator()"></i>
-                    <i class="icon fas fa-envelope" title="Abrir Outlook" onclick="openOutlook()"></i>
-                    <i class="icon fas fa-sticky-note" title="Abrir Bloco de Notas" onclick="openNotepad()"></i>
-                </div>
+                <ul class="button-list">
+  
+      <button onclick="togglePage('page1')">Correio Eletrônico</button>
+      <div id="page1" class="content">
+        <!-- Conteúdo da página 1 -->
+        <div class="email-wrapper">
+          <div class="email-sidebar">
+            <ul>
+              <li><a href="#inbox">Caixa de Entrada</a></li>
+              <li><a href="#drafts">Rascunhos</a></li>
+              <li><a href="#trash">Lixeira</a></li>
+              <li><a href="#sent">Enviados</a></li>
+            </ul>
+          </div>
+          <div class="email-main-content">
+            <div class="email-toolbar">
+              <a class="email-compose">Escrever E-mail</a>
+            </div>
+            <div id="inbox-folder" class="email-folder">
+              <!-- Conteúdo da Caixa de Entrada -->
+            </div>
+            <div id="drafts-folder" class="email-folder">
+              <!-- Conteúdo dos Rascunhos -->
+            </div>
+            <div id="trash-folder" class="email-folder">
+              <!-- Conteúdo da Lixeira -->
+            </div>
+            <div id="sent-folder" class="email-folder">
+              <!-- Conteúdo dos E-mails Enviados -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
             </li>
             <li>
                 <button onclick="togglePage('page2')">Boletos NFSe</button>
