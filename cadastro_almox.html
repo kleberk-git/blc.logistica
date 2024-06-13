@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos</title>
+    <link rel="stylesheet" href="styles_cadastro_almox.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de Produtos</h1>
+        <!-- Formulário de cadastro de produtos -->
+        <form id="product-form">
+            <label for="name">Nome do Produto:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="sector">Setor:</label>
+            <input type="text" id="sector" name="sector" required>
+    
+            <label for="quantity">Quantidade:</label>
+            <input type="number" id="quantity" name="quantity" required>
+    
+            <label for="price">Preço:</label>
+            <input type="number" id="price" name="price" required>
+    
+            <label for="asset">Observação:</label>
+            <input type="text" id="asset" name="asset" required>
+    
+            <div class="buttons-container">
+                <button type="submit">Cadastrar</button>
+                <a href="menu.html"><button type="button">Cancelar</button></a>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

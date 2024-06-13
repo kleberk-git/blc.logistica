@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Rastreamento Logístico - Cadastro</title>
+    <link rel="stylesheet" href="styles_rastreabilidade.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sistema de Rastreamento Logístico - Cadastro</h1>
+        <div id="form-container">
+            <div class="form-section" id="step1">
+                <h2>Cadastrar Motorista</h2>
+                <form id="driverForm">
+                    <label for="driverName">Nome:</label>
+                    <input type="text" id="driverName" required>
+                    <label for="licenseNumber">Número da Habilitação:</label>
+                    <input type="text" id="licenseNumber" required>
+                    <label for="phone">Telefone:</label>
+                    <input type="text" id="phone" required>
+                    <label for="vehicle">Veículo:</label>
+                    <input type="text" id="vehicle" required>
+                </form>
+            </div>
+            <div class="form-section" id="step2" style="display: none;">
+                <h2>Cadastrar Rota</h2>
+                <form id="routeForm">
+                    <label for="origin">Origem:</label>
+                    <input type="text" id="origin" required>
+                    <label for="destination">Destino:</label>
+                    <input type="text" id="destination" required>
+                    <label for="distance">Distância (km):</label>
+                    <input type="number" id="distance" required>
+                </form>
+            </div>
+            <div class="form-section" id="step3" style="display: none;">
+                <h2>Cadastrar Produto</h2>
+                <form id="productForm">
+                    <label for="productName">Nome do Produto:</label>
+                    <input type="text" id="productName" required>
+                    <label for="description">Descrição:</label>
+                    <input type="text" id="description">
+                    <label for="weight">Peso (kg):</label>
+                    <input type="number" id="weight" required>
+                </form>
+            </div>
+            <div class="form-section" id="step4" style="display: none;">
+                <h2>Gerar Código de Rastreamento</h2>
+                <p><strong>Motorista:</strong> <span id="driverInfo"></span></p>
+                <p><strong>Rota:</strong> <span id="routeInfo"></span></p>
+                <p><strong>Produto:</strong> <span id="productInfo"></span></p>
+                <p><strong>Código de Rastreamento:</strong> <span id="trackingCode"></span></p>
+            </div>
+        </div>
+        <div class="pagination">
+            <button id="prevPage" onclick="prevPage()">Anterior</button>
+            <button id="nextPage" onclick="nextPage()">Próximo</button>
+        </div>
+    </div>
+    <script src="cadastro_veiculo.js"></script>
+</body>
+</html>

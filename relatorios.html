@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatórios de Cadastros</title>
+    <link rel="stylesheet" href="styles_relatorios.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Relatórios de Cadastros</h1>
+        <!-- Formulário para filtrar produtos -->
+        <form id="filter-form">
+            <label for="search">Buscar Produto:</label>
+            <input type="text" id="search" name="search">
+            <div class="buttons-container">
+                <button type="submit">Consultar</button>
+                <a href="menu.html"><button type="button">Cancelar</button></a>
+            </div>
+            <div class="container">
+                <table id="myTable">
+                    <thead>
+                            <thead>
+                                <tr>
+                                  <th>Nome do Produto</th>
+                                  <th>Setor</th>
+                                  <th>Quantidade</th>
+                                  <th>Preço</th>
+                                  <th>Observação</th>
+                                </tr>
+                              </thead>
+                          <tr>
+                            <td>Produto B</td>
+                            <td>Setor 2</td>
+                            <td>20</td>
+                            <td>R$ 30,00</td>
+                            <td>Observação sobre o Produto B</td>
+                          </tr>
+                          <tr>
+                            <td>Produto C</td>
+                            <td>Setor 3</td>
+                            <td>15</td>
+                            <td>R$ 70,00</td>
+                            <td>Observação sobre o Produto C</td>
+                          </tr>
+                          <tr>
+                            <td>Produto D</td>
+                            <td>Setor 4</td>
+                            <td>12</td>
+                            <td>R$ 40,00</td>
+                            <td>Observação sobre o Produto D</td>
+                          </tr>
+                          <tr>
+                            <td>Produto E</td>
+                            <td>Setor 5</td>
+                            <td>18</td>
+                            <td>R$ 60,00</td>
+                            <td>Observação sobre o Produto E</td>
+                          </tr>
+                          <tr>
+                            <td>Produto F</td>
+                            <td>Setor 6</td>
+                            <td>25</td>
+                            <td>R$ 55,00</td>
+                            <td>Observação sobre o Produto F</td>
+                          </tr>
+                          <tr>
+                            <td>Produto G</td>
+                            <td>Setor 7</td>
+                            <td>30</td>
+                            <td>R$ 45,00</td>
+                            <td>Observação sobre o Produto G</td>
+                          </tr>
+                          <tr>
+                            <td>Produto H</td>
+                            <td>Setor 8</td>
+                            <td>22</td>
+                            <td>R$ 75,00</td>
+                            <td>Observação sobre o Produto H</td>
+                          </tr>
+                          <tr>
+                            <td>Produto I</td>
+                            <td>Setor 9</td>
+                            <td>8</td>
+                            <td>R$ 65,00</td>
+                            <td>Observação sobre o Produto I</td>
+                          </tr>
+                          <tr>
+                            <td>Produto J</td>
+                            <td>Setor 10</td>
+                            <td>14</td>
+                            <td>R$ 80,00</td>
+                            <td>Observação sobre o Produto J</td>
+                          </tr>
+                          <tr>
+                            <td>Produto K</td>
+                            <td>Setor 11</td>
+                            <td>19</td>
+                            <td>R$ 90,00</td>
+                            <td>Observação sobre o Produto K</td>
+                          </tr>
+                          <tr>
+                            <td>Produto L</td>
+                            <td>Setor 12</td>
+                            <td>11</td>
+                            <td>R$ 95,00</td>
+                            <td>Observação sobre o Produto L</td>
+                          </tr>
+                          <tr>
+                            <td>Produto M</td>
+                            <td>Setor 13</td>
+                            <td>16</td>
+                            <td>R$ 85,00</td>
+                            <td>Observação sobre o Produto M</td>
+                          </tr>
+                          <tr>
+                            <td>Produto N</td>
+                            <td>Setor 14</td>
+                            <td>23</td>
+                            <td>R$ 100,00</td>
+                            <td>Observação sobre o Produto N</td>
+                          </tr>
+                          <tr>
+                            <td>Produto O</td>
+                            <td>Setor 15</td>
+                            <td>28</td>
+                            <td>R$ 110,00</td>
+                            <td>Observação sobre o Produto O</td>
+                          </tr>
+                          <tr>
+                            <td>Produto P</td>
+                            <td>Setor 16</td>
+                            <td>7</td>
+                            <td>R$ 120,00</td>
+                            <td>Observação sobre o Produto P</td>
+                          </tr>
+                          <tr>
+                            <td>Produto Q</td>
+                            <td>Setor 17</td>
+                            <td>13</td>
+                            <td>R$ 130,00</td>
+                            <td>Observação sobre o Produto Q</td>
+                          </tr>
+                          <tr>
+                            <td>Produto R</td>
+                            <td>Setor 18</td>
+                            <td>17</td>
+                            <td>R$ 140,00</td>
+                            <td>Observação sobre o Produto R</td>
+                          </tr>
+                          <tr>
+                            <td>Produto S</td>
+                            <td>Setor 19</td>
+                            <td>21</td>
+                            <td>R$ 150,00</td>
+                            <td>Observação sobre o Produto S</td>
+                          </tr>
+                    </tbody>
+                </table>
+                
+                <a href="#" id="prev">&laquo; Anterior</a>
+                <a href="#" id="next">Próximo &raquo;</a>
+            </div>
+            
+        </div>
+    </li>
+        </form>
+        
+        <!-- Resultados do filtro de produtos -->
+        <div id="results"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

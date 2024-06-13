@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rastrear Encomenda</title>
+    <link rel="stylesheet" href="styles_acompanhar_rota.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Rastrear Encomenda</h1>
+        <form id="trackForm">
+            <label for="trackingCodeInput">Código de Rastreamento:</label>
+            <input type="text" id="trackingCodeInput" required>
+            <button type="submit">Rastrear</button>
+        </form>
+        <div id="trackingResult" style="display: none;">
+            <h2>Detalhes do Rastreamento</h2>
+            <p><strong>Motorista:</strong> <span id="resultDriver"></span></p>
+            <p><strong>Rota:</strong> <span id="resultRoute"></span></p>
+            <p><strong>Produto:</strong> <span id="resultProduct"></span></p>
+            <p><strong>Status:</strong> <span id="resultStatus"></span></p>
+        </div>
+    </div>
+    <script src="track.js"></script>
+</body>
+</html>

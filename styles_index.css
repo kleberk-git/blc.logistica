@@ -1,0 +1,211 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+}
+
+.login-container {
+    width: 400px;
+    background-color: #3163af;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+a{
+    color: #fff;
+}
+
+.login-container img {
+background-color: #fff;
+border-radius: 50%;
+}
+
+.logo-container {
+    width: 400px; /* Mesma largura da .login-container */
+    height: 347px;
+    background-color: #fff;
+
+}
+.logo-container img{
+    margin-top: 55px;
+    max-width:100%;
+ 
+
+}
+.container {
+    display: flex;
+    flex-direction: row; /* Padrão: linha */
+    justify-content: center;
+    align-items: flex-start; /* Alinhar as divs ao topo */
+    flex-wrap: wrap; /* Permite que as divs sejam envolvidas em várias linhas */
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Altera para layout de coluna em telas menores */
+        align-items: center; /* Centraliza as divs na vertical */
+    }
+
+    .logo-container {
+        display: none; /* Esconde a div de logo */
+    }
+
+    .login-container {
+        width: 100%; /* Ocupa 90% da largura da tela */
+    }
+}
+.user-image {
+    width: 100px; /* Ajuste o tamanho conforme necessário */
+    height: 100px; /* Ajuste o tamanho conforme necessário */
+    border-radius: 50%; /* Torna a imagem circular */
+    margin-bottom: 20px; /* Adiciona espaço entre a imagem e o formulário */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container {
+ 
+    position: relative;
+}
+
+input {
+
+    margin-bottom: 10px;
+    padding: 8px 10px; /* Ajusta o padding para se igualar ao tamanho do botão */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: calc(100% - 20px); /* Ajusta a largura para ocupar o tamanho do container menos o padding */
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.forgot-password {
+    margin-top: 10px;
+    color: #fff
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.buttons-container {
+    display: flex;
+    align-items: center;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button + a button {
+    background-color: #dc3545;
+    margin-left: 10px;
+}
+
+button + a button:hover {
+    background-color: #c82333;
+}
+
+
+/* Estilos para o dashboard container */
+.dashboard-container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+ 
+}
+
+/* Estilos para o chart-container */
+.chart-container {
+    flex: 1; /* Faz com que cada chart-container ocupe a mesma largura */
+    padding: 15px; /* Adiciona um espaçamento interno */
+    background-color: #fff; /* Cor de fundo */
+    border-radius: 8px; /* Borda arredondada */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    width: 300px;
+
+ 
+}
+
+/* Estilos para o gráfico circular */
+.circle-chart {
+    position: relative;
+    margin-left: 35px;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background-color: #a82222;
+}
+
+.circle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: transparent;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.inner-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-circle span {
+    font-size: 24px;
+    color: #333;
+}
+

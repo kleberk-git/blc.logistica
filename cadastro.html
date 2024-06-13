@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Cadastro</title>
+    <link rel="stylesheet" href="styles_tabelas.css">
+</head>
+<body>
+    <div class="login-container">
+        <form id="register-form">
+            <h2>Cadastro de Clientes</h2>
+            <input type="text" id="nome" placeholder="Nome" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="date" id="data_nascimento" placeholder="Data de Nascimento" required>
+            <input type="text" id="empresa" placeholder="Empresa" required>
+            <input type="text" id="tipo_contrato" placeholder="Tipo de Contrato" required>
+            
+            <div class="buttons-container">
+                <button type="button" onclick="cadastrarCliente()">Cadastrar</button>
+                <button type="button" onclick="limparFormulario()">Limpar</button>
+                <button type="button" onclick="voltarParaLogin()">Início</button>
+            </div>
+        </form>
+    </div>
+
+    <button id="show-table-button" onclick="toggleTableVisibility()">Mostrar Relação de Dados Cadastrados</button>
+   
+    <div id="client-table" class="client-table" display: none;">
+        <table id="myTable_cadastro">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Data de Nascimento</th>
+                    <th>Empresa</th>
+                    <th>Tipo de Contrato</th>
+                    <th>Código de Acesso</th>
+                </tr>
+                <input type="text" id="search" onkeyup="pesquisar()" placeholder="Pesquisar..." style="display: none;">
+            </thead>
+            <tbody>
+                <!-- Os dados do cliente serão inseridos aqui -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
