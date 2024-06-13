@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,8 @@
     <link rel="stylesheet" href="styles_menu.css">
     <script async src="https://docs.opencv.org/4.5.5/opencv.js" type="text/javascript"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    
 </head>
+
 <body>
     <nav class="navbar">
         <div class="navbar-container">
@@ -26,8 +27,8 @@
                     <li><a href="#">Sair</a></li>
                 </ul>
             </div>
-        </nav>
-    </div>
+        </div>
+    </nav>
 
     <div class="center-container">
         <h1 id="welcome-message">Bem-vindo!</h1>
@@ -35,41 +36,40 @@
             <li>
                 <button onclick="togglePage('page1')">Ferramentas Essenciais</button>
                 <ul class="button-list">
-  <li>
-      <button onclick="togglePage('page1')">Correio Eletrônico</button>
-      <div id="page1" class="content">
-        <!-- Conteúdo da página 1 -->
-        <div class="email-wrapper">
-          <div class="email-sidebar">
-            <ul>
-              <li><a href="#inbox">Caixa de Entrada</a></li>
-              <li><a href="#drafts">Rascunhos</a></li>
-              <li><a href="#trash">Lixeira</a></li>
-              <li><a href="#sent">Enviados</a></li>
-            </ul>
-          </div>
-          <div class="email-main-content">
-            <div class="email-toolbar">
-              <a class="email-compose">Escrever E-mail</a>
-            </div>
-            <div id="inbox-folder" class="email-folder">
-              <!-- Conteúdo da Caixa de Entrada -->
-            </div>
-            <div id="drafts-folder" class="email-folder">
-              <!-- Conteúdo dos Rascunhos -->
-            </div>
-            <div id="trash-folder" class="email-folder">
-              <!-- Conteúdo da Lixeira -->
-            </div>
-            <div id="sent-folder" class="email-folder">
-              <!-- Conteúdo dos E-mails Enviados -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </li>
-  </ul>
-</div>
+                    <li>
+                        <button onclick="togglePage('page1')">Correio Eletrônico</button>
+                        <div id="page1" class="content">
+                            <!-- Conteúdo da página 1 -->
+                            <div class="email-wrapper">
+                                <div class="email-sidebar">
+                                    <ul>
+                                        <li><a href="#inbox">Caixa de Entrada</a></li>
+                                        <li><a href="#drafts">Rascunhos</a></li>
+                                        <li><a href="#trash">Lixeira</a></li>
+                                        <li><a href="#sent">Enviados</a></li>
+                                    </ul>
+                                </div>
+                                <div class="email-main-content">
+                                    <div class="email-toolbar">
+                                        <a class="email-compose">Escrever E-mail</a>
+                                    </div>
+                                    <div id="inbox-folder" class="email-folder">
+                                        <!-- Conteúdo da Caixa de Entrada -->
+                                    </div>
+                                    <div id="drafts-folder" class="email-folder">
+                                        <!-- Conteúdo dos Rascunhos -->
+                                    </div>
+                                    <div id="trash-folder" class="email-folder">
+                                        <!-- Conteúdo da Lixeira -->
+                                    </div>
+                                    <div id="sent-folder" class="email-folder">
+                                        <!-- Conteúdo dos E-mails Enviados -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </li>
             <li>
                 <button onclick="togglePage('page2')">Boletos NFSe</button>
@@ -80,32 +80,32 @@
                             <form id="boletoForm">
                                 <label for="numeroBoleto">Número do Boleto:</label>
                                 <input type="text" id="numeroBoleto" name="numeroBoleto" required><br>
-                                
+
                                 <label for="dataEmissao">Data de Emissão:</label>
                                 <input type="date" id="dataEmissao" name="dataEmissao" required><br>
-                                
+
                                 <label for="dataVencimento">Data de Vencimento:</label>
                                 <input type="date" id="dataVencimento" name="dataVencimento" required><br>
-                                
+
                                 <label for="valor">Valor:</label>
                                 <input type="text" id="valor" name="valor" required><br>
-                                
+
                                 <label for="status">Status:</label>
                                 <select id="status" name="status" required>
                                     <option value="Pendente">Pendente</option>
                                     <option value="Pago">Pago</option>
                                 </select><br>
-                                
+
                                 <label for="empresa">Empresa:</label>
                                 <input type="text" id="empresa" name="empresa" required><br>
-                                
+
                                 <label for="cpfCnpj">CPF/CNPJ:</label>
                                 <input type="text" id="cpfCnpj" name="cpfCnpj" required><br>
-                                
+
                                 <button type="submit" class="botao-boleto">Adicionar Boleto</button>
                             </form>
                         </div>
-                        
+
                         <table id="myTable">
                             <thead>
                                 <tr>
@@ -122,7 +122,7 @@
                                 <!-- Linhas de boletos adicionados aparecerão aqui -->
                             </tbody>
                         </table>
-                        
+
                         <a href="#" id="prev">&laquo; Anterior</a>
                         <a href="#" id="next">Próximo &raquo;</a>
                     </div>
@@ -135,7 +135,7 @@
                     <div class="verificar-container">
                         <h2>Verificar Notas Fiscais</h2>
                         <input title="Adicionar arquivo original" type="file" id="original" accept="image/*"><br>
-                        <input title="Adicionar arquivo a ser verificado" type="file" id="verified" accept="image/*">                        
+                        <input title="Adicionar arquivo a ser verificado" type="file" id="verified" accept="image/*">
                         <div id="result"></div><br>
                         <button onclick="compareImages()">Verificar</button>
                         <a href="menu.html"><button class="fechar">Fechar</button></a>
@@ -150,53 +150,54 @@
                         <h2>Cadastro e Consulta de Rotas</h2>
                         <!-- Botões para acessar o cadastro e os relatórios -->
                         <div class="buttons">
-                         <a href="rastreabilidade.html"><button class="almox">Cadastrar</button></a>
-                        <a href="consultar_rota.html" target="_blank"><button class="almox">Consultar Rotas</button></a>
+                            <a href="rastreabilidade.html"><button class="almox">Cadastrar</button></a>
+                            <a href="consultar_rota.html" target="_blank"><button class="almox">Consultar Rotas</button></a>
+                        </div>
                     </div>
                 </div>
             </li>
             <li>
-            
                 <button onclick="togglePage('page6')">Almoxarifado</button>
                 <div id="page6" class="content">
-                    <!-- Conteúdo da página 2 -->
+                    <!-- Conteúdo da página 6 -->
                     <div class="container">
                         <h2>Cadastro - Sistema de Inventário</h2>
                         <!-- Botões para acessar o cadastro e os relatórios -->
                         <div class="buttons">
-                         <a href="cadastro_almox.html"><button class="almox">Cadastrar Produto</button></a>
+                            <a href="cadastro_almox.html"><button class="almox">Cadastrar Produto</button></a>
                             <a href="relatorios.html"><button class="almox">Relatórios de Cadastros</button></a>
                         </div>
                     </div>
-                </li>
-                <li>  
-                    <button onclick="togglePage('page7')">Suporte</button>
-                    <div id="page7" class="content">
-                        <!-- Conteúdo da página 5 -->
-                        <div class="container-card">
-                            <div class="card">
-                                <h2 title="Bloco Logístico Codificado">Empresa BLC</h2>
-                              <p>Entre em contato conosco:</p>
-                              <ul>
+                </div>
+            </li>
+            <li>
+                <button onclick="togglePage('page7')">Suporte</button>
+                <div id="page7" class="content">
+                    <!-- Conteúdo da página 7 -->
+                    <div class="container-card">
+                        <div class="card">
+                            <h2 title="Bloco Logístico Codificado">Empresa BLC</h2>
+                            <p>Entre em contato conosco:</p>
+                            <ul>
                                 <li>Email: <a href="mailto:suporte@empresa.com">suporte@empresa.com</a></li>
                                 <li>WhatsApp: <a href="https://api.whatsapp.com/send?phone=SEUNUMERODOWHATSAPP">Clique aqui para enviar uma mensagem</a></li>
-                              </ul>
-                            </div>
-                          </div>
+                            </ul>
+                        </div>
                     </div>
-                </li>
-                <li>  
+                </div>
+            </li>
+            <li>
                 <a href="index.html"><button onclick="fecharJanela()" class="logout">Sair</button></a>
-                </li>
-            </ul>
-        </div>
-    
-        <!-- Rodapé -->
-        <footer class="footer">
-            <!-- Texto de copyright -->
-            <p>&copy; 2024 BLC LOGÍSTICA. Todos os direitos reservados.</p>
-        </footer>
-        <script src="script.js"></script>
-    </body>
-    </html>
-    
+            </li>
+        </ul>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <!-- Texto de copyright -->
+        <p>&copy; 2024 BLC LOGÍSTICA. Todos os direitos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
