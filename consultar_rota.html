@@ -17,9 +17,12 @@
         <div id="trackingResult" style="display: none;">
             <h2>Detalhes do Rastreamento</h2>
             <p><strong>Motorista:</strong> <span id="resultDriver"></span></p>
-            <p><strong>Rota:</strong> <span id="resultRoute"></span></p>
+            <p><strong>Rota:</strong> <span id="resultRoute"></span><br> <button id="showMapBtn" onclick="showMap()">Acompanhar Rota</button></p>
             <p><strong>Produto:</strong> <span id="resultProduct"></span></p>
             <p><strong>Status:</strong> <span id="resultStatus"></span></p>
+            <div id="mapContainer" style="display: none; margin-top: 15px;">
+                <iframe id="mapFrame" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d31137.50361449018!2d-38.3020687!3d-12.701152449999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1smaps%20que%20posso%20usar%20na%20minha%20aplica%C3%A7%C3%A3o%20gratis!5e0!3m2!1spt-BR!2sbr!4v1718627737916!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </div>
     </div>
     <script src="track.js"></script>

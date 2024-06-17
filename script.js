@@ -20,6 +20,7 @@ function togglePage(pageId) {
     var pages = document.querySelectorAll('.content');
     var div = document.getElementById(pageId);
     
+    
     // Verifica se a div já está ativa
     if (div.classList.contains('active')) {
         div.classList.remove('active');
@@ -40,6 +41,12 @@ function togglePage(pageId) {
     
     container.insertBefore(div, button.nextSibling); // Insere a div após o botão
 }
+
+function togglePage(pageId) {
+    var page = document.getElementById(pageId);
+    page.style.display = page.style.display === 'none' ? 'block' : 'none';
+}
+
 
 document.addEventListener("DOMContentLoaded", function() {
     const table = document.getElementById("myTable");
@@ -234,10 +241,6 @@ document.addEventListener('DOMContentLoaded', function() {
     originalImg.src = URL.createObjectURL(originalInput.files[0]);
 }
 
- function togglePage(pageId) {
-            var page = document.getElementById(pageId);
-            page.style.display = page.style.display === 'none' ? 'block' : 'none';
-        }
 
         document.getElementById('boletoForm').addEventListener('submit', function(event) {
             event.preventDefault();
@@ -425,4 +428,27 @@ function pesquisar() {
     }
 }
 
+function showFolder(folderId) {
+    document.querySelectorAll('.email-list, .email-folder').forEach(folder => {
+      folder.classList.remove('active');
+    });
+    document.getElementById(folderId).classList.add('active');
+    document.getElementById('compose-email-form').style.display = 'none';
+  }
 
+  function composeEmail() {
+    document.querySelectorAll('.email-list, .email-folder').forEach(folder => {
+      folder.classList.remove('active');
+    });
+    document.getElementById('compose-email-form').style.display = 'flex';
+  }
+
+  function sendEmail() {
+    alert('E-mail enviado!');
+    // Adicionar lógica para enviar e-mail aqui
+  }
+
+  function searchEmails(query) {
+    alert(`Pesquisar e-mails por: ${query}`);
+    // Adicionar lógica de pesquisa aqui
+  }

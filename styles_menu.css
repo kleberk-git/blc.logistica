@@ -1,411 +1,550 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 5pc;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 150%;
-    background-color: #f0f0f0;
+ 
+  font-family: Arial, sans-serif;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #f0f0f0;
+
+
 }
+
+li {
+  list-style-type: none;
+  margin: 5px;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #005A9E;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+  box-sizing: border-box;
+}
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+}
+.sidebar a:hover {
+  background-color: #004080;
+}
+.sidebar i {
+  margin-right: 10px;
+}
+.email-main-content {
+
+  flex-grow: 1;
+  background-color: #FFFFFF;
+ 
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+ 
+}
+.email-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.email-toolbar a {
+  text-decoration: none;
+  color: #005A9E;
+  font-size: 16px;
+  margin: 0 10px;
+}
+.email-compose {
+  background-color: #005A9E;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.email-list, .email-folder {
+  flex-grow: 1;
+  overflow-y: auto;
+  display: none;
+  width: 100%;
+}
+.email-list.active, .email-folder.active {
+  display: block;
+}
+.email-item {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.email-item h4 {
+  margin: 0 0 5px;
+}
+
+
+.email-item p {
+  margin: 0;
+  color: #555;
+}
+.search-bar {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  background-color: #F0F0F0;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  width: 96%;
+}
+.search-bar input {
+  flex-grow: 1;
+  padding: 5px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+.search-bar i {
+  color: #005A9E;
+  margin-left: 10px;
+}
+
+.compose-email input, .compose-email textarea {
+  width: 95%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+}
+.compose-email textarea {
+  height: 200px;
+}
+.compose-email button {
+  background-color: #005A9E;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+}
+
+
 .button-list {
-    list-style: none;
-    padding: 0;
-    margin: 0; /* Remove a margem padrão */
+  list-style: none;
+  padding: 0;
+  margin: 0; /* Remove a margem padrão */
 }
 
 .button-list li {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 button {
-    width: 800px;
-    padding: 15px 30px; /* Aumenta o tamanho dos botões */
-    border: none;
-    background-color: #007bff;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 5px;
-    display: block; /* Torna os botões em blocos */
-    margin: 0 auto; /* Centraliza os botões */
+  width: 800px;
+  padding: 15px 30px; /* Aumenta o tamanho dos botões */
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  display: block; /* Torna os botões em blocos */
+  margin: 0 auto; /* Centraliza os botões */
+}
+
+.enviar{
+  margin: 5px;
+ 
 }
 
 .content {
-    display: none;
-    border: 1px solid #ccc; /* Adiciona borda */
-    padding: 20px; /* Adiciona espaçamento interno */
-    width: 800px; /* Garante que as divs ocupem a largura total */
-    box-sizing: border-box; /* Considera padding e borda como parte da largura */
-    margin: 10px auto 0; /* Adiciona margem superior para separar as divs */
-    text-align: center; /* Alinha o conteúdo no centro */
+  display: none;
+  border: 1px solid #ccc; /* Adiciona borda */
+  padding: 20px; /* Adiciona espaçamento interno */
+  width: 800px; /* Garante que as divs ocupem a largura total */
+  box-sizing: border-box; /* Considera padding e borda como parte da largura */
+  margin: 10px auto 0; /* Adiciona margem superior para separar as divs */
+  text-align: center; /* Alinha o conteúdo no centro */
 }
 
 .content.active {
-    display: block;
+  display: block;
 }
 
 
 
 .almox {
-    width: 30%;
-    padding: 15px 30px; /* Aumenta o tamanho dos botões */
-    border: none;
-    background-color: #007bff;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 5px;
-    display: inline-block; /* Altera o display para inline-block */
-    margin-right: 10px; /* Adiciona margem entre os botões */
+  width: 30%;
+  padding: 15px 30px; /* Aumenta o tamanho dos botões */
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  display: inline-block; /* Altera o display para inline-block */
+  margin-right: 10px; /* Adiciona margem entre os botões */
 }
 
 .container {
-    max-width: 800px;
-    margin: 0 auto;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 table {
-    width: 100%;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
 }
 
 th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
 }
 
 th {
-    background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
 
 tr:hover {
-    background-color: #f5f5f5;
+  background-color: #f5f5f5;
 }
 
 .pagination {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .pagination a {
-    color: black;
-    float: right;
-    padding: 8px 16px;
-    text-decoration: none;
+  color: black;
+  float: right;
+  padding: 8px 16px;
+  text-decoration: none;
 }
 
 .pagination a.active {
-    background-color: #4CAF50;
-    color: white;
+  background-color: #4CAF50;
+  color: white;
 }
 
 .pagination a:hover:not(.active) {
-    background-color: #ddd;
+  background-color: #ddd;
 }
 
 .container-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 .card {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 100%;
-    text-align: center;
-  }
-  
-  .card h2 {
-    margin-top: 0;
-    color: #333;
-  }
-  
-  .card p {
-    margin-bottom: 10px;
-  }
-  
-  .card ul {
-    padding: 0;
-    list-style-type: none;
-  }
-  
-  .card ul li {
-    margin-bottom: 10px;
-  }
-  
-  .card ul li a {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  .card ul li a:hover {
-    text-decoration: underline;
-  }
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+}
 
-  .email-wrapper {
-    display: flex;
-    height: 100%;
-  }
-  
-  .email-sidebar {
-    width: 250px;
-    background-color: #f4f4f4;
-    padding: 20px;
-    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .email-sidebar h3 {
-    margin-top: 0;
-  }
-  
-  .email-sidebar ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .email-sidebar li {
-    padding: 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .email-sidebar li:hover {
-    background-color: #e0e0e0;
-    cursor: pointer;
-  }
-  
-  .email-main-content {
-    flex-grow: 1;
-    padding: 20px;
-  }
-  
-  .email-toolbar {
-    margin-bottom: 20px;
-  }
-  
-  .email-folder {
-    display: none;
-  }
-  
-  .email-folder.active {
-    display: block;
-  }
+.card h2 {
+  margin-top: 0;
+  color: #333;
+}
 
-  .verificar-container {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Centraliza os elementos internamente */
-    
+.card p {
+  margin-bottom: 10px;
+}
+
+.card ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.card ul li {
+  margin-bottom: 10px;
+}
+
+.teste{
+display: flex;
+ 
+  height: 100%;
+  width: 100%;
+}
+.card ul li a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.card ul li a:hover {
+  text-decoration: underline;
+}
+
+.email-wrapper {
+  display: flex;
+  height: 100%;
+}
+
+.email-sidebar {
+  width: 250px;
+  background-color: #f4f4f4;
+  padding: 20px;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.email-sidebar h3 {
+  margin-top: 0;
+}
+
+.email-sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.email-sidebar li {
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.email-sidebar li:hover {
+  background-color: #e0e0e0;
+  cursor: pointer;
+}
+
+
+
+.email-toolbar {
+  margin-bottom: 20px;
+}
+
+.email-folder {
+  display: none;
+}
+
+.email-folder.active {
+  display: block;
+}
+
+.verificar-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Centraliza os elementos internamente */
+  
 }
 
 .verificar-container input[type="file"] {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 /* Alterações para colocar os botões lado a lado */
 .verificar-container button {
-    width: 45%; /* Define a largura para cada botão */
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    display: inline-block; /* Faz com que os botões fiquem lado a lado */
+  width: 45%; /* Define a largura para cada botão */
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-block; /* Faz com que os botões fiquem lado a lado */
 }
 
 
 
 .verificar-container #result {
-    margin-top: 20px;
-    font-weight: bold;
+  margin-top: 20px;
+  font-weight: bold;
 }
 
 
 .verificar-container  .fechar{
-  background-color: #dc3545;
+background-color: #dc3545;
 }
 
 .logout{
-  background-color: #dc3545;
-  color: #fff;
-  text-decoration: none;
+background-color: #dc3545;
+color: #fff;
+text-decoration: none;
 }
 
 a{
- text-decoration: none;
+text-decoration: none;
 }
 
 
 /* CSS para o formulário de cadastro de boletos */
 
 .container-boleto {
-    margin-top: 20px; /* Adiciona espaço acima do formulário */
+  margin-top: 20px; /* Adiciona espaço acima do formulário */
 }
 
 .form-container {
-    background-color: #f9f9f9; /* Cor de fundo do formulário */
-    padding: 20px; /* Espaçamento interno do formulário */
-    border-radius: 8px; /* Borda arredondada */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+  background-color: #f9f9f9; /* Cor de fundo do formulário */
+  padding: 20px; /* Espaçamento interno do formulário */
+  border-radius: 8px; /* Borda arredondada */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
 }
 
 .form-container h2 {
-    margin-bottom: 20px; /* Adiciona espaço abaixo do título do formulário */
+  margin-bottom: 20px; /* Adiciona espaço abaixo do título do formulário */
 }
 
 .form-container label {
-    display: block; /* Exibe cada label em uma nova linha */
-    margin-bottom: 5px; /* Adiciona espaço entre os labels */
+  display: block; /* Exibe cada label em uma nova linha */
+  margin-bottom: 5px; /* Adiciona espaço entre os labels */
 }
 
 .form-container input[type="text"],
 .form-container input[type="date"],
 .form-container select {
-    width: calc(100% - 20px); /* Ocupa toda a largura disponível, com margem */
-    padding: 8px; /* Espaçamento interno */
-    margin-bottom: 10px; /* Adiciona espaço abaixo dos inputs */
-    border: 1px solid #ccc; /* Borda */
-    border-radius: 5px; /* Borda arredondada */
+  width: calc(100% - 20px); /* Ocupa toda a largura disponível, com margem */
+  padding: 8px; /* Espaçamento interno */
+  margin-bottom: 10px; /* Adiciona espaço abaixo dos inputs */
+  border: 1px solid #ccc; /* Borda */
+  border-radius: 5px; /* Borda arredondada */
 }
 
 .form-container select {
-    cursor: pointer; /* Altera o cursor para indicar que o elemento é selecionável */
+  cursor: pointer; /* Altera o cursor para indicar que o elemento é selecionável */
 }
 
 .form-container button.botao-boleto {
-    background-color: #007bff; /* Cor de fundo do botão */
-    color: #fff; /* Cor do texto do botão */
-    padding: 10px 20px; /* Espaçamento interno do botão */
-    border: none; /* Remove a borda */
-    border-radius: 5px; /* Borda arredondada */
-    cursor: pointer; /* Altera o cursor ao passar sobre o botão */
-    width: 100%; /* Ocupa toda a largura disponível */
+  background-color: #007bff; /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto do botão */
+  padding: 10px 20px; /* Espaçamento interno do botão */
+  border: none; /* Remove a borda */
+  border-radius: 5px; /* Borda arredondada */
+  cursor: pointer; /* Altera o cursor ao passar sobre o botão */
+  width: 100%; /* Ocupa toda a largura disponível */
 }
 
 .form-container button.botao-boleto:hover {
-    background-color: #0056b3; /* Cor de fundo do botão ao passar o mouse */
+  background-color: #0056b3; /* Cor de fundo do botão ao passar o mouse */
 }
 
 .navbar {
-    background-color:#3163af;
-    color: #fff;
-    padding: 15px 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
+  background-color:#3163af;
+  color: #fff;
+  padding: 15px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
 
 .navbar-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .brand {
-    font-size: 1.5rem;
-    text-decoration: none;
-    color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #fff;
 }
 
 .nav-links {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
 .nav-links li {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
 .nav-links li a {
-    text-decoration: none;
-    color: #fff;
+  text-decoration: none;
+  color: #fff;
 }
 
 /* Estilos para o menu hamburguer */
 .menu-icon {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
 }
 
 .bar {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 3px 0;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 3px 0;
 }
 
 /* Estilos para o menu dropdown */
 .menu {
-    display: none;
-    position: absolute;
-    background-color: #333;
-    top: 60px;
-    right: 20px;
-    padding: 10px;
-    border-radius: 5px;
+  display: none;
+  position: absolute;
+  background-color: #333;
+  top: 60px;
+  right: 20px;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .menu-links {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .menu-links li {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .menu-links li a {
-    color: #fff;
-    text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 }
 
 /* Estilos para o conteúdo central */
 .center-container {
-    margin-top: 80px; /* Espaço para o navbar */
-    padding: 20px;
+  margin-top: 80px; /* Espaço para o navbar */
+  padding: 20px;
 }
 
 /* Estilos para o rodapé */
-
 .footer {
-  background-color: #3163af;
-  color: #fff;
-  padding: 10px 0;
-  text-align: center;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000; /* Para garantir que fique acima de outros elementos */
+background-color: #3163af;
+color: #fff;
+padding: 10px 0;
+text-align: center;
+position: fixed;
+bottom: 0;
+left: 0;
+width: 100%;
+z-index: 1000; /* Para garantir que fique acima de outros elementos */
 }
 .menu-icon {
-  display: none;
-  cursor: pointer;
+display: none;
+cursor: pointer;
 }
 
 .menu-icon .bar {
-  width: 25px;
-  height: 3px;
-  background-color: #333;
-  margin: 5px 0;
-  transition: 0.4s;
+width: 25px;
+height: 3px;
+background-color: #333;
+margin: 5px 0;
+transition: 0.4s;
 }
 .icon {
-  font-size: 3rem;
-  cursor: pointer;
-  margin: 0 10px; /* Adicionando margem horizontal para espaço entre os ícones */
+font-size: 3rem;
+cursor: pointer;
+margin: 0 10px; /* Adicionando margem horizontal para espaço entre os ícones */
 }
